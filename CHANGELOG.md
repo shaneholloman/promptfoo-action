@@ -1,5 +1,57 @@
 # Changelog
 
+## [2.0.0](https://github.com/shaneholloman/promptfoo-action/compare/promptfoo-action-v1.2.1...promptfoo-action-v2.0.0) (2026-02-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* This action now requires environments that support Node.js 20
+
+### Features
+
+* add --no-table and --no-progress-bar flags ([#583](https://github.com/shaneholloman/promptfoo-action/issues/583)) ([5b9ed14](https://github.com/shaneholloman/promptfoo-action/commit/5b9ed14fe5e6d1da23a05f39b669b1b6b11b4436))
+* add `working-directory` as an input ([#359](https://github.com/shaneholloman/promptfoo-action/issues/359)) ([481aac1](https://github.com/shaneholloman/promptfoo-action/commit/481aac15e3cf6ab0af54eac2a05adc2ba8386e38))
+* Add comprehensive caching support for GitHub Actions ([#625](https://github.com/shaneholloman/promptfoo-action/issues/625)) ([438d8e3](https://github.com/shaneholloman/promptfoo-action/commit/438d8e33a8b3e7cde53b3e0c763d582743e46b12))
+* Add custom provider dependency detection with wildcard support ([#615](https://github.com/shaneholloman/promptfoo-action/issues/615)) ([425c078](https://github.com/shaneholloman/promptfoo-action/commit/425c078a987b7f4a611ceca200ab7fa2d61235fa))
+* add max-concurrency option for rate limiting ([#591](https://github.com/shaneholloman/promptfoo-action/issues/591)) ([6d0934e](https://github.com/shaneholloman/promptfoo-action/commit/6d0934ea6a490d21d7ed3daf19b4dd1d23d3e445))
+* add no-cache parameter to promptfoo-action ([#669](https://github.com/shaneholloman/promptfoo-action/issues/669)) ([93f18ad](https://github.com/shaneholloman/promptfoo-action/commit/93f18ada2902d795c8ad9c0a9b5161bd17e934e4))
+* add option to disable comment ([#584](https://github.com/shaneholloman/promptfoo-action/issues/584)) ([d660275](https://github.com/shaneholloman/promptfoo-action/commit/d660275d722e32a094b01c8f867faa2d5c1efd8c))
+* add support for loading .env files ([#579](https://github.com/shaneholloman/promptfoo-action/issues/579)) ([68bfbb7](https://github.com/shaneholloman/promptfoo-action/commit/68bfbb7f7c381f63e76571da7c227d4ed943e13b))
+* add workflow_dispatch support for manual triggering ([#585](https://github.com/shaneholloman/promptfoo-action/issues/585)) ([30143f8](https://github.com/shaneholloman/promptfoo-action/commit/30143f8efcbb643065462e79af106707e1f0fce4))
+* make prompts optional ([#414](https://github.com/shaneholloman/promptfoo-action/issues/414)) ([7f9fc19](https://github.com/shaneholloman/promptfoo-action/commit/7f9fc1945450cc37c479c0b1392c5593f5cee7e8))
+* make prompts parameter truly optional ([#592](https://github.com/shaneholloman/promptfoo-action/issues/592)) ([95bf94d](https://github.com/shaneholloman/promptfoo-action/commit/95bf94db9ef165012947a19a595bb45b164f4062))
+* Skip sharing when auth is not available ([#614](https://github.com/shaneholloman/promptfoo-action/issues/614)) ([71ad945](https://github.com/shaneholloman/promptfoo-action/commit/71ad9452ff0d64a76a8e245ce44a6b4b21647030))
+* validate Promptfoo API key before running evaluation ([#683](https://github.com/shaneholloman/promptfoo-action/issues/683)) ([b6d2253](https://github.com/shaneholloman/promptfoo-action/commit/b6d2253f9ed202775749bacf0efd66ae149017ae))
+
+
+### Bug Fixes
+
+* Add build step before package in dependabot workflow ([#679](https://github.com/shaneholloman/promptfoo-action/issues/679)) ([6bc088d](https://github.com/shaneholloman/promptfoo-action/commit/6bc088dfcee6c6b029f536974cb1c154c38a3a80))
+* allow more git refs in `validateGitRef` ([#636](https://github.com/shaneholloman/promptfoo-action/issues/636)) ([7c3955a](https://github.com/shaneholloman/promptfoo-action/commit/7c3955aeef37a125ed9a77ee9e9e015dc6ed0cca))
+* checkout repo to load script file in github-script action ([#687](https://github.com/shaneholloman/promptfoo-action/issues/687)) ([de3682f](https://github.com/shaneholloman/promptfoo-action/commit/de3682f3182ba8c50dee70ffe0402f6807700482))
+* **ci:** rebuild dist files properly in dependabot PRs ([#722](https://github.com/shaneholloman/promptfoo-action/issues/722)) ([41e299b](https://github.com/shaneholloman/promptfoo-action/commit/41e299b13fad1f2084f5644c1feed62f280094d2))
+* **deps:** update dependency @actions/core to v2 ([#776](https://github.com/shaneholloman/promptfoo-action/issues/776)) ([332ba8b](https://github.com/shaneholloman/promptfoo-action/commit/332ba8b9b8595d257a8447895bd7826bcd62328b))
+* **deps:** update dependency @actions/core to v3 ([#819](https://github.com/shaneholloman/promptfoo-action/issues/819)) ([a52f2aa](https://github.com/shaneholloman/promptfoo-action/commit/a52f2aa779a0d23718a9101c26bb08c8363a8570))
+* **deps:** update dependency @actions/exec to v2 ([#777](https://github.com/shaneholloman/promptfoo-action/issues/777)) ([7fc2c02](https://github.com/shaneholloman/promptfoo-action/commit/7fc2c026fbf896cf717fc3af997c7ac40e3e05fa))
+* **deps:** update dependency @actions/exec to v3 ([#816](https://github.com/shaneholloman/promptfoo-action/issues/816)) ([0eb09b7](https://github.com/shaneholloman/promptfoo-action/commit/0eb09b7cca52ad059200768d5de2639dbbe56783))
+* **deps:** update dependency @actions/github to v7 ([#790](https://github.com/shaneholloman/promptfoo-action/issues/790)) ([9c3f414](https://github.com/shaneholloman/promptfoo-action/commit/9c3f41406d95da578f9800a86bb22a07f0b5d15d))
+* **deps:** update dependency @actions/github to v8 ([#810](https://github.com/shaneholloman/promptfoo-action/issues/810)) ([d6385a1](https://github.com/shaneholloman/promptfoo-action/commit/d6385a1b459a7b99020a1ae448fc4e0f83c7db69))
+* **deps:** update dependency @actions/github to v9 ([#813](https://github.com/shaneholloman/promptfoo-action/issues/813)) ([a1e3d22](https://github.com/shaneholloman/promptfoo-action/commit/a1e3d22f4ca8cdef59bbc2ab04a323e939e56e16))
+* **deps:** update dependency @actions/io to v3 ([#815](https://github.com/shaneholloman/promptfoo-action/issues/815)) ([d9ac7ae](https://github.com/shaneholloman/promptfoo-action/commit/d9ac7aee7cb269ec46d167b380e0f9656bf895d1))
+* **deps:** update dependency glob to v13 ([#750](https://github.com/shaneholloman/promptfoo-action/issues/750)) ([f4f1022](https://github.com/shaneholloman/promptfoo-action/commit/f4f102249c32faf369678dc3ecb1a6fe0dba41e4))
+* **dist:** rebuild after dependency updates ([#721](https://github.com/shaneholloman/promptfoo-action/issues/721)) ([02fb87e](https://github.com/shaneholloman/promptfoo-action/commit/02fb87e4573648be26edb00a9a393753039920ec))
+* **dist:** rebuild distribution files after dependency update ([#720](https://github.com/shaneholloman/promptfoo-action/issues/720)) ([2b9a209](https://github.com/shaneholloman/promptfoo-action/commit/2b9a20955b4b209a00e7657bea8e1e09337ff7e8))
+* post PR comments even when tests fail ([#787](https://github.com/shaneholloman/promptfoo-action/issues/787)) ([41c9d9e](https://github.com/shaneholloman/promptfoo-action/commit/41c9d9ed1cca1c3b0253c78fe90dc2258daaf978))
+* Potential fix for code scanning alert no. 5: Workflow does not contain permissions ([#542](https://github.com/shaneholloman/promptfoo-action/issues/542)) ([764baf4](https://github.com/shaneholloman/promptfoo-action/commit/764baf4359ca58cf1157d6cb6da5e40d527ddf76))
+* skip empty commits in dependabot workflow ([#682](https://github.com/shaneholloman/promptfoo-action/issues/682)) ([0c501d5](https://github.com/shaneholloman/promptfoo-action/commit/0c501d526432befe6c42b84c03e5950a7a874994))
+* **workflows:** remove dependabot post-update automation workflow ([#403](https://github.com/shaneholloman/promptfoo-action/issues/403)) ([05d17a4](https://github.com/shaneholloman/promptfoo-action/commit/05d17a4a171fad88efbf071c9a1471c6cd3a8eb1))
+* **workflows:** update permissions in GitHub Actions workflows ([#459](https://github.com/shaneholloman/promptfoo-action/issues/459)) ([edc671c](https://github.com/shaneholloman/promptfoo-action/commit/edc671cf6847537e8fc3d2ed200bb58a16a1de40))
+
+
+### Miscellaneous Chores
+
+* update Node.js runtime from node16 to node20 ([#588](https://github.com/shaneholloman/promptfoo-action/issues/588)) ([37e3eff](https://github.com/shaneholloman/promptfoo-action/commit/37e3effa6514c83a2d473b94edce0062a7b5a7cb))
+
 ## [1.2.1](https://github.com/promptfoo/promptfoo-action/compare/promptfoo-action-v1.2.0...promptfoo-action-v1.2.1) (2026-01-08)
 
 
